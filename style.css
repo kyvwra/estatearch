@@ -1,0 +1,99 @@
+:root {
+  --bg-light: #f9f7f2;          
+  --text-dark: #1a1a1a; 
+  --gold-accent: #b2945e;   
+  --line-color: rgba(0, 0, 0, 0.06);
+}
+
+/* RESET GENERAL */
+* { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none !important; }
+html, body { width: 100%; overflow-x: hidden; background-color: var(--bg-light); font-family: 'Montserrat', sans-serif; color: var(--text-dark); -webkit-font-smoothing: antialiased; }
+
+/* NAVBAR */
+.navbar { position: absolute; top: 0; width: 100%; padding: 50px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+.nav-logo { font-family: 'Marcellus', serif; font-size: 0.8rem; letter-spacing: 5px; color: var(--text-dark); text-transform: uppercase; }
+.nav-links a { font-size: 0.5rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-dark); margin-left: 25px; opacity: 0.4; transition: 0.8s ease; }
+.nav-links a:hover { opacity: 1; color: var(--gold-accent); }
+
+/* HERO */
+.hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; }
+.hero-brand { font-family: 'Marcellus', serif; font-size: clamp(1.8rem, 8vw, 3.5rem); letter-spacing: 12px; text-transform: uppercase; margin-bottom: 20px; }
+.hero-slogan { font-size: 0.55rem; letter-spacing: 5px; text-transform: uppercase; color: #aaa; }
+
+/* PHILOSOPHY */
+.philosophy-section { padding: 120px 10%; background: #fff; text-align: center; border-bottom: 1px solid var(--line-color); }
+.philosophy-title { font-family: 'Marcellus', serif; font-size: clamp(1.1rem, 4vw, 1.8rem); margin: 30px auto; max-width: 800px; font-weight: 400; line-height: 1.6; }
+.philosophy-text { font-size: 0.7rem; color: #888; max-width: 600px; margin: 0 auto; line-height: 2; font-weight: 300; }
+
+/* SERVICES */
+.services-section { padding: 100px 10%; background: #fff; }
+.services-header { text-align: center; margin-bottom: 60px; }
+.services-main-title { font-family: 'Marcellus', serif; font-size: 1.5rem; margin-top: 20px; font-weight: 400; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.service-item h3 { font-family: 'Marcellus'; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 15px; text-transform: uppercase; }
+.service-item p { font-size: 0.65rem; color: #888; line-height: 1.8; }
+
+/* PROPERTIES GRID */
+.property-grid { display: grid; grid-template-columns: 1fr 1fr; background-color: var(--line-color); gap: 1px; }
+.property-item { background: var(--bg-light); overflow: hidden; }
+.prop-image-container { width: 100%; height: 550px; overflow: hidden; }
+.prop-image { width: 100%; height: 100%; background-size: cover; background-position: center; transition: 2.5s cubic-bezier(0.15, 0, 0.15, 1); }
+.property-item:hover .prop-image { transform: scale(1.05); }
+.prop-content { padding: 60px 10%; text-align: center; }
+.prop-name { font-family: 'Marcellus'; font-size: 1.1rem; margin: 15px 0; font-weight: 400; }
+.prop-price { font-size: 0.7rem; letter-spacing: 2px; color: var(--text-dark); margin-bottom: 25px; display: block; }
+
+/* BLACK BOOK */
+.black-book { padding: 100px 10%; background: #1a1a1a; color: #fff; text-align: center; display: flex; justify-content: center; }
+.black-book-inner { border: 1px solid rgba(255,255,255,0.1); padding: 80px 20px; width: 100%; max-width: 800px; }
+.black-book h2 { font-family: 'Marcellus'; font-size: 1.3rem; letter-spacing: 6px; text-transform: uppercase; margin-bottom: 20px; }
+.black-book p { font-size: 0.55rem; letter-spacing: 3px; color: #666; text-transform: uppercase; margin-bottom: 40px; }
+.black-book-btn { color: #fff !important; border-bottom-color: rgba(255,255,255,0.3) !important; }
+
+/* CONCIERGE */
+.concierge-section { padding: 100px 10%; background: #fdfcf9; border-top: 1px solid var(--line-color); }
+.concierge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; text-align: center; }
+.concierge-item h4 { font-family: 'Marcellus'; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
+.concierge-item p { font-size: 0.6rem; color: #999; line-height: 1.8; }
+
+/* FOOTER */
+.footer-contact { padding: 100px 10%; text-align: center; background: #fff; border-top: 1px solid var(--line-color); }
+.footer-logo { font-family: 'Marcellus'; font-size: 1.2rem; letter-spacing: 8px; text-transform: uppercase; }
+.contact-address { font-size: 0.6rem; letter-spacing: 2px; color: #888; text-transform: uppercase; line-height: 2; margin: 30px 0; }
+.contact-actions { display: flex; justify-content: center; gap: 30px; }
+.copyright { margin-top: 60px; font-size: 0.4rem; letter-spacing: 3px; color: #ccc; text-transform: uppercase; }
+
+/* HELPERS */
+.btn-minimal { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 3px; color: var(--text-dark); padding-bottom: 5px; border-bottom: 1px solid rgba(0,0,0,0.1); display: inline-block; transition: 1.2s cubic-bezier(0.15, 0, 0.15, 1); cursor: pointer; }
+.btn-minimal:hover { letter-spacing: 5px; color: var(--gold-accent); border-bottom-color: var(--gold-accent); }
+.section-subtitle { font-size: 0.5rem; letter-spacing: 5px; color: var(--gold-accent); text-transform: uppercase; }
+
+/* --- RESPONSIVE FIXES (EXCLUSIV PENTRU TELEFON) --- */
+@media (max-width: 850px) {
+  html, body { overflow-x: hidden; position: relative; width: 100%; }
+
+  .navbar { flex-direction: column; gap: 20px; padding: 40px 0; align-items: center; text-align: center; }
+  .nav-links { margin-left: 0; width: 100%; display: flex; justify-content: center; }
+  .nav-links a { margin: 0 10px; font-size: 0.45rem; }
+
+  .hero { padding: 0 5%; align-items: center; }
+  .hero-brand { letter-spacing: 6px; text-align: center; }
+
+  .philosophy-section, .services-section, .concierge-section, .footer-contact { 
+    padding: 80px 5%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .services-grid, .property-grid, .concierge-grid { grid-template-columns: 1fr; gap: 40px; width: 100%; }
+  
+  .service-item, .concierge-item { display: flex; flex-direction: column; align-items: center; width: 100%; }
+
+  .prop-image-container { height: 350px; }
+  .prop-content { padding: 40px 5%; width: 100%; }
+
+  .contact-actions { flex-direction: column; gap: 25px; align-items: center; width: 100%; }
+  .btn-minimal { margin: 0 auto; }
+}

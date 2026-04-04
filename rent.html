@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOR RENT | ESTATE ARCH.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Păstrăm stilul tău pentru specificații și descriere */
+    .prop-specs-inline { display: flex; justify-content: center; gap: 15px; margin-top: 15px; font-size: 0.5rem; letter-spacing: 1px; color: #999; text-transform: uppercase; }
+    .prop-description-hidden { max-height: 0; overflow: hidden; transition: all 0.8s ease; font-size: 0.65rem; line-height: 2; color: #888; opacity: 0; padding: 0 10%; }
+    .property-item:hover .prop-description-hidden, .property-item:focus-within .prop-description-hidden { max-height: 100px; margin-top: 15px; opacity: 1; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" style="background: rgba(255,255,255,0.95); position: fixed; border-bottom: 1px solid var(--line-color); padding: 25px 5%;">
+    <a href="index.html" class="nav-logo">ESTATE ARCH.</a>
+    <div class="nav-links">
+      <a href="sale.html">Sale</a>
+      <a href="rent.html" style="color: var(--gold-accent); opacity: 1;">Rent</a>
+      <a href="valuation.html">Valuation</a>
+    </div>
+  </nav>
+
+  <header style="padding: 160px 10% 60px; text-align: center;">
+    <h1 style="font-family: 'Marcellus', serif; font-size: 2rem; letter-spacing: 8px; text-transform: uppercase;">Rental Collection</h1>
+    <p style="font-size: 0.55rem; letter-spacing: 4px; color: #aaa; margin-top: 15px; text-transform: uppercase;">Exclusive Residences for Lease</p>
+  </header>
+
+  <section class="property-grid">
+    <article class="property-item" tabindex="0">
+      <div class="prop-image-container">
+        <div class="prop-image" style="background-image: url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+      </div>
+      <div class="prop-content">
+        <span class="prop-city">București • Downtown</span>
+        <h2 class="prop-name">The Urban Loft</h2>
+        <div class="prop-specs-inline"><span>140 MP</span> | <span>2 Camere</span></div>
+        <span class="prop-price" style="margin-top: 15px; display: block;">€3,500 / month</span>
+        <div class="prop-description-hidden">Design industrial rafinat cu ferestre imense, complet mobilat de designer și servicii de concierge 24/7.</div>
+        <a href="mailto:office@estatearch.com?subject=Inquiry: Urban Loft Rent" class="btn-minimal">Inquire</a>
+      </div>
+    </article>
+
+    <article class="property-item" tabindex="0">
+      <div class="prop-image-container">
+        <div class="prop-image" style="background-image: url('https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+      </div>
+      <div class="prop-content">
+        <span class="prop-city">București • Nord</span>
+        <h2 class="prop-name">Nordic Wellness Villa</h2>
+        <div class="prop-specs-inline"><span>380 MP</span> | <span>5 Camere</span></div>
+        <span class="prop-price" style="margin-top: 15px; display: block;">€6,800 / month</span>
+        <div class="prop-description-hidden">Vila dispune de spa privat, piscină interioară și o grădină japoneză minimalistă pentru relaxare totală.</div>
+        <a href="mailto:office@estatearch.com?subject=Inquiry: Nordic Villa Rent" class="btn-minimal">Inquire</a>
+      </div>
+    </article>
+
+    <article class="property-item" tabindex="0">
+      <div class="prop-image-container">
+        <div class="prop-image" style="background-image: url('https://images.pexels.com/photos/1129413/pexels-photo-1129413.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+      </div>
+      <div class="prop-content">
+        <span class="prop-city">Cluj-Napoca • Bună Ziua</span>
+        <h2 class="prop-name">The Slate Apartment</h2>
+        <div class="prop-specs-inline"><span>95 MP</span> | <span>3 Camere</span></div>
+        <span class="prop-price" style="margin-top: 15px; display: block;">€2,100 / month</span>
+        <div class="prop-description-hidden">Apartament cu finisaje premium din ardezie și lemn masiv, oferind o priveliște panoramică asupra orașului.</div>
+        <a href="mailto:office@estatearch.com?subject=Inquiry: Slate Apartment Rent" class="btn-minimal">Inquire</a>
+      </div>
+    </article>
+
+    <article class="property-item" tabindex="0">
+      <div class="prop-image-container">
+        <div class="prop-image" style="background-image: url('https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+      </div>
+      <div class="prop-content">
+        <span class="prop-city">Poiana Brașov • Forest</span>
+        <h2 class="prop-name">Pine Retreat Lodge</h2>
+        <div class="prop-specs-inline"><span>220 MP</span> | <span>4 Camere</span></div>
+        <span class="prop-price" style="margin-top: 15px; display: block;">€4,200 / month</span>
+        <div class="prop-description-hidden">O experiență montană de lux, cu șemineu suspendat și acces direct către traseele de ski.</div>
+        <a href="mailto:office@estatearch.com?subject=Inquiry: Pine Retreat Rent" class="btn-minimal">Inquire</a>
+      </div>
+    </article>
+  </section>
+
+  <footer style="padding: 60px 5%; text-align: center; font-size: 0.4rem; letter-spacing: 4px; color: #ccc; text-transform: uppercase;">
+    Estate Arch. &copy; 2026 • Curated Rentals
+  </footer>
+
+</body>
+</html>

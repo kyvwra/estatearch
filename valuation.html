@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASSET VALUATION | ESTATE ARCH.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .valuation-container {
+      max-width: 600px;
+      margin: 180px auto 100px;
+      padding: 0 5%;
+      text-align: center;
+    }
+    .val-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+      margin-bottom: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      outline: none;
+      transition: border-color 0.8s;
+    }
+    .val-input:focus { border-bottom-color: var(--gold-accent); }
+    ::placeholder { color: #ccc; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">ESTATE ARCH.</a>
+    <div class="nav-links">
+      <a href="sale.html">Sale</a>
+      <a href="rent.html">Rent</a>
+      <a href="valuation.html" style="color: var(--gold-accent);">Valuation</a>
+    </div>
+  </nav>
+
+  <div class="valuation-container">
+    <span style="font-size: 0.5rem; letter-spacing: 5px; color: var(--gold-accent); text-transform: uppercase;">Expert Opinion</span>
+    <h1 style="font-family: 'Marcellus', serif; font-size: 1.8rem; margin: 20px 0 60px; letter-spacing: 5px;">REQUEST VALUATION</h1>
+    
+    <form action="#">
+      <input type="text" class="val-input" placeholder="Full Name" required>
+      <input type="email" class="val-input" placeholder="Email Address" required>
+      <input type="text" class="val-input" placeholder="Property Location (City/Area)" required>
+      <input type="text" class="val-input" placeholder="Estimated Surface (sqm)">
+      
+      <div style="margin-top: 40px;">
+        <button type="submit" class="btn-minimal" style="background: transparent; border-top: none; border-left: none; border-right: none;">Submit Inquiry</button>
+      </div>
+    </form>
+    
+    <p style="font-size: 0.45rem; color: #bbb; margin-top: 60px; letter-spacing: 2px; text-transform: uppercase;">
+      Our representative will contact you within 24 hours for a private consultation.
+    </p>
+  </div>
+
+</body>
+</html>
