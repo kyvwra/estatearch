@@ -36,7 +36,7 @@ html, body {
 .hero-nav .nav-links a:hover { color: var(--gold-accent); }
 
 /* ========================================================
-   HERO SECTION
+   HEADERS & HERO SECTION
 ======================================================== */
 .hero { 
     position: relative;
@@ -56,17 +56,21 @@ html, body {
 .hero-brand { font-family: 'Marcellus', serif; color: #fff; font-size: clamp(2rem, 8vw, 4rem); letter-spacing: 12px; text-transform: uppercase; margin-bottom: 20px; }
 .hero-slogan { font-size: 0.65rem; letter-spacing: 5px; text-transform: uppercase; color: #eaeaea; margin-bottom: 0; }
 
+.page-header {
+    padding: 180px 10% 60px;
+    text-align: center;
+    background: transparent;
+}
+
 /* ========================================================
    CONTENT SECTIONS (Philosophy, Journal, Services)
 ======================================================== */
-/* Split Layout (Philosophy / Journal) */
 .philosophy-section { display: grid; grid-template-columns: 1fr 1fr; background: transparent; border-bottom: 1px solid var(--line-color); }
 .philosophy-image { background-size: cover; background-position: center; min-height: 600px; }
 .philosophy-content { padding: 100px 10%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; max-width: 800px; margin: 0 auto; }
 .philosophy-title { font-family: 'Marcellus', serif; font-size: clamp(1.2rem, 3vw, 1.8rem); margin: 30px 0; font-weight: 400; line-height: 1.6; }
 .philosophy-text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.9; font-weight: 300; }
 
-/* Services Grid */
 .services-section { padding: 100px 10%; background: transparent; border-bottom: 1px solid var(--line-color); }
 .services-header { text-align: center; margin-bottom: 60px; }
 .services-main-title { font-family: 'Marcellus', serif; font-size: 1.8rem; margin-top: 20px; font-weight: 400; }
@@ -76,27 +80,24 @@ html, body {
 .service-item h3 { font-family: 'Marcellus', serif; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase; }
 .service-item p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; }
 
-/* Black Book - Aceasta ramane inchisa la culoare pentru ca este sectiunea "Black" a brandului */
 .black-book { padding: 120px 10%; background: #111; color: #fff; text-align: center; display: flex; justify-content: center; }
 .black-book-inner { border: 1px solid rgba(255,255,255,0.15); padding: 80px 20px; width: 100%; max-width: 800px; }
 .black-book h2 { font-family: 'Marcellus', serif; font-size: 1.5rem; letter-spacing: 6px; text-transform: uppercase; margin-bottom: 20px; }
 .black-book p { font-size: 0.7rem; letter-spacing: 3px; color: #aaa; text-transform: uppercase; margin-bottom: 40px; line-height: 1.6; }
 .black-book-btn { color: #fff !important; border-bottom-color: rgba(255,255,255,0.4) !important; }
 
-/* Concierge */
 .concierge-section { padding: 100px 10%; background: transparent; border-top: 1px solid var(--line-color); }
 .concierge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; }
 .concierge-item { background: transparent; padding: 50px 30px; border: 1px solid var(--line-color); }
 .concierge-item h4 { font-family: 'Marcellus', serif; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
 .concierge-item p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; }
 
-/* Trust Badges */
 .trust-badges { padding: 80px 10%; background: transparent; text-align: center; border-top: 1px solid var(--line-color); }
 .trust-logos { display: flex; justify-content: center; align-items: center; gap: 50px; margin-top: 30px; opacity: 0.4; }
 .trust-logos span { font-family: 'Marcellus', serif; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 3px; }
 
 /* ========================================================
-   PROPERTY GRID (Sale, Rent, Archive)
+   PROPERTY GRID
 ======================================================== */
 .property-grid { display: grid; grid-template-columns: 1fr 1fr; background-color: var(--line-color); gap: 1px; }
 .property-item { background: transparent; overflow: hidden; position: relative; }
@@ -107,15 +108,11 @@ html, body {
 .prop-name { font-family: 'Marcellus', serif; font-size: 1.3rem; margin: 15px 0; font-weight: 400; }
 .prop-price { font-size: 0.8rem; letter-spacing: 2px; color: var(--text-dark); margin-bottom: 25px; display: block; font-weight: 500; }
 
-/* Inline Specs (Sale/Rent pages) */
 .prop-specs-inline { display: flex; justify-content: center; gap: 15px; margin-top: 15px; font-size: 0.75rem; font-weight: 500; letter-spacing: 1px; color: var(--text-muted); text-transform: uppercase; }
-.prop-description-hidden { max-height: 0; overflow: hidden; transition: all 0.8s ease; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted); opacity: 0; padding: 0 10%; }
-.property-item:hover .prop-description-hidden, .property-item:focus-within .prop-description-hidden { max-height: 150px; margin-top: 15px; opacity: 1; }
 
-/* Archive/Sold Elements */
 .sold-overlay { position: absolute; top: 20px; right: 20px; background: #fff; color: #000; padding: 5px 15px; font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; z-index: 5; }
-.property-item.sold { filter: grayscale(1); opacity: 0.8; }
-.property-item.sold:hover .prop-image { transform: scale(1); }
+.property-item.sold { filter: grayscale(1); opacity: 0.8; transition: 0.5s ease; }
+.property-item.sold:hover { filter: grayscale(0); opacity: 1; }
 
 /* ========================================================
    VALUATION FORM
@@ -126,7 +123,7 @@ html, body {
 .val-input::placeholder { color: #aaa; font-weight: 300; }
 
 /* ========================================================
-   FOOTER
+   FOOTER (UNIFORM)
 ======================================================== */
 .footer-contact { padding: 100px 10%; text-align: center; background: transparent; border-top: 1px solid var(--line-color); }
 .footer-logo { font-family: 'Marcellus', serif; font-size: 1.4rem; letter-spacing: 8px; text-transform: uppercase; }
@@ -146,11 +143,10 @@ html, body {
 .btn-solid:hover { background: var(--gold-accent); border-color: var(--gold-accent); color: #fff; }
 
 /* ========================================================
-   MODALS & LIGHTBOX (Gallery & About)
+   MODALS & LIGHTBOX
 ======================================================== */
 .modal-trigger { cursor: pointer; }
 
-/* Overlay View Gallery pe Hover */
 .gallery-overlay {
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
     color: #fff; font-size: 0.75rem; font-weight: 500; letter-spacing: 4px;
@@ -160,7 +156,6 @@ html, body {
 }
 .prop-image-container:hover .gallery-overlay { opacity: 1; }
 
-/* Fullscreen Modal (Galeria) */
 .modal {
     display: none; position: fixed; z-index: 1000; padding-top: 5vh; left: 0; top: 0; 
     width: 100%; height: 100%; background-color: rgba(0,0,0,0.95); backdrop-filter: blur(8px);
@@ -185,7 +180,6 @@ html, body {
 .next { right: 0; border-radius: 4px 0 0 4px; }
 .prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); color: var(--gold-accent); }
 
-/* Pop-up About / Dossier / Articles */
 .about-modal {
     display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%;
     background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px);
@@ -211,6 +205,9 @@ html, body {
 /* ========================================================
    RESPONSIVE FIXES (Tablets & Mobile)
 ======================================================== */
+/* ========================================================
+   RESPONSIVE FIXES (Tablets & Mobile)
+======================================================== */
 @media (max-width: 950px) {
   html, body { overflow-x: hidden; position: relative; width: 100%; }
 
@@ -222,6 +219,12 @@ html, body {
   .nav-links a, .hero-nav .nav-links a { color: var(--text-dark); margin: 0; font-size: 0.6rem; padding: 5px; }
 
   .hero-brand { font-size: 2.5rem; letter-spacing: 6px; }
+
+  /* =================================================== */
+  /* FIX PENTRU A PREVENI SUPRAPUNEREA TEXTULUI PE MOBIL */
+  /* =================================================== */
+  header:not(.hero) { padding-top: 260px !important; }
+  .valuation-container { margin-top: 260px !important; }
   
   .philosophy-section { grid-template-columns: 1fr; border-bottom: 1px solid var(--line-color); }
   .philosophy-image { min-height: 400px; }
