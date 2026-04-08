@@ -127,7 +127,7 @@ html, body {
 /* ========================================================
    FOOTER
 ======================================================== */
-.footer-contact { padding: 100px 10%; text-align: center; background: #fff; border-top: 1px solid var(--line-color); }
+.footer-contact { padding: 100px 10%; text-align: center; background: transparent; border-top: 1px solid var(--line-color); }
 .footer-logo { font-family: 'Marcellus', serif; font-size: 1.4rem; letter-spacing: 8px; text-transform: uppercase; }
 .contact-address { font-size: 0.75rem; letter-spacing: 2px; color: var(--text-muted); text-transform: uppercase; line-height: 2; margin: 30px 0; }
 .contact-actions { display: flex; justify-content: center; gap: 30px; }
@@ -215,9 +215,13 @@ html, body {
 
   .navbar { padding: 30px 5%; flex-direction: column; gap: 15px; background: rgba(255,255,255,0.95) !important; }
   .nav-logo, .hero-nav .nav-logo { color: var(--text-dark); }
+  
+  /* AICI E MAGIA PENTRU CENTRAREA PE TELEFON */
+  .nav-links { display: flex; flex-wrap: wrap; justify-content: center; row-gap: 15px; }
   .nav-links a, .hero-nav .nav-links a { color: var(--text-dark); margin: 0 10px; font-size: 0.55rem; }
 
   .hero-brand { font-size: 2.5rem; letter-spacing: 6px; }
+  /* ... lasă restul regulilor media exact cum erau ... */
   
   .philosophy-section { grid-template-columns: 1fr; }
   .philosophy-image { min-height: 400px; }
