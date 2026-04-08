@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCHIVE | ESTATE ARCH.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .sold-overlay { position: absolute; top: 20px; right: 20px; background: #fff; color: #000; padding: 5px 15px; font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; z-index: 5; }
+    .property-item.sold { filter: grayscale(1); opacity: 0.8; transition: 0.5s ease; }
+    .property-item.sold:hover { filter: grayscale(0); opacity: 1; }
+  </style>
+</head>
+<body>
+  <nav class="navbar" style="background: rgba(255,255,255,0.95); position: fixed; border-bottom: 1px solid var(--line-color); padding: 25px 5%; z-index: 100;">
+    <a href="index.html" class="nav-logo">ESTATE ARCH.</a>
+    <div class="nav-links">
+      <a href="sale.html">Sale</a>
+      <a href="rent.html">Rent</a>
+      <a href="archive.html" style="color: var(--gold-accent); opacity: 1;">Archive</a>
+      <a href="services.html">Services</a>
+      <a href="journal.html">Journal</a>
+      <a href="valuation.html">Valuation</a>
+    </div>
+  </nav>
+
+  <header style="padding: 160px 10% 40px; text-align: center;">
+    <h1 style="font-family: 'Marcellus', serif; font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: 8px; text-transform: uppercase;">Heritage Portfolio</h1>
+    <p class="section-subtitle" style="margin-top: 15px;">Active transferate cu succes către noii lor custozi</p>
+  </header>
+
+  <div style="display: flex; justify-content: center; gap: 6vw; margin-bottom: 80px; flex-wrap: wrap; text-align: center; padding: 0 5%;">
+      <div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 2.5rem; color: var(--gold-accent);">€28M+</h3>
+          <span class="section-subtitle" style="margin-top: 10px;">Volum Tranzacționat (2025)</span>
+      </div>
+      <div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 2.5rem; color: var(--gold-accent);">14</h3>
+          <span class="section-subtitle" style="margin-top: 10px;">Proprietăți Reprezentate</span>
+      </div>
+      <div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 2.5rem; color: var(--gold-accent);">100%</h3>
+          <span class="section-subtitle" style="margin-top: 10px;">Confidențialitate Menținută</span>
+      </div>
+  </div>
+
+  <section class="property-grid">
+    <article class="property-item sold">
+      <div class="prop-image-container">
+        <div class="sold-overlay">Sold</div>
+        <div class="prop-image" style="background-image: url('img/2.png');"></div>
+      </div>
+      <div class="prop-content">
+        <span class="prop-city">Riviera • Exclusiv</span>
+        <h2 class="prop-name">The Concrete House</h2>
+        <span class="prop-price">Tranzacție Confidențială</span>
+      </div>
+    </article>
+
+    <article class="property-item sold">
+      <div class="prop-image-container">
+        <div class="sold-overlay">Leased</div>
+        <div class="prop-image" style="background-image: url('img/3.png');"></div>
+      </div>
+      <div class="prop-content">
+        <span class="prop-city">Riviera • Promenadă</span>
+        <h2 class="prop-name">Penthouse X</h2>
+        <span class="prop-price">Închiriat: Termen Lung</span>
+      </div>
+    </article>
+
+    <article class="property-item sold">
+      <div class="prop-image-container">
+        <div class="sold-overlay">Sold</div>
+        <div class="prop-image" style="background-image: url('img/4.png');"></div>
+      </div>
+      <div class="prop-content">
+        <span class="prop-city">Riviera • Centru Istoric</span>
+        <h2 class="prop-name">Maison Dorée</h2>
+        <span class="prop-price">Tranzacție Confidențială</span>
+      </div>
+    </article>
+
+    <article class="property-item sold">
+      <div class="prop-image-container">
+        <div class="sold-overlay">Sold</div>
+        <div class="prop-image" style="background-image: url('img/5.png');"></div>
+      </div>
+      <div class="prop-content">
+        <span class="prop-city">Riviera • Faleză</span>
+        <h2 class="prop-name">The Edge Villa</h2>
+        <span class="prop-price">Tranzacție Confidențială</span>
+      </div>
+    </article>
+  </section>
+
+  <footer class="footer-contact">
+     <p class="copyright">Estate Arch. &copy; 2026 • Sold Archive</p>
+  </footer>
+</body>
+</html>

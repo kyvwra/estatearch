@@ -19,6 +19,9 @@
     <div class="nav-links">
       <a href="sale.html">Sale</a>
       <a href="rent.html" style="color: var(--gold-accent); opacity: 1;">Rent</a>
+      <a href="archive.html">Archive</a>
+      <a href="services.html">Services</a>
+      <a href="journal.html">Journal</a>
       <a href="valuation.html">Valuation</a>
     </div>
   </nav>
@@ -185,7 +188,6 @@
   </div>
 
   <script>
-    // --- Logica Galerie ---
     let currentSlideIndex = 0;
     let currentImages = [];
 
@@ -213,14 +215,10 @@
         document.getElementById("modalImage").src = currentImages[index];
     }
 
-    // --- Logica Pop-Up About ---
     function openAbout(buttonElement) {
-        // Găsește cardul proprietății pe care am dat click
         const card = buttonElement.closest('.property-item');
-        // Ia codul HTML ascuns de acolo
         const aboutData = card.querySelector('.about-data').innerHTML;
         
-        // Baga-l in Pop-up și deschide
         document.getElementById('aboutContentInject').innerHTML = aboutData;
         document.getElementById('aboutModal').style.display = 'block';
         document.body.style.overflow = 'hidden'; 
@@ -231,7 +229,6 @@
         document.body.style.overflow = 'auto'; 
     }
 
-    // --- Inchidere la click in afara ferestrelor ---
     window.onclick = function(event) {
         let galleryModal = document.getElementById("galleryModal");
         let aboutModal = document.getElementById("aboutModal");

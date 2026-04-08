@@ -14,11 +14,14 @@
 </head>
 <body>
 
-  <nav class="navbar" style="background: rgba(255,255,255,0.95); position: fixed; border-bottom: 1px solid var(--line-color); padding: 25px 5%;">
+  <nav class="navbar" style="background: rgba(255,255,255,0.95); position: fixed; border-bottom: 1px solid var(--line-color); padding: 25px 5%; z-index: 100;">
     <a href="index.html" class="nav-logo">ESTATE ARCH.</a>
     <div class="nav-links">
       <a href="sale.html" style="color: var(--gold-accent); opacity: 1;">Sale</a>
       <a href="rent.html">Rent</a>
+      <a href="archive.html">Archive</a>
+      <a href="services.html">Services</a>
+      <a href="journal.html">Journal</a>
       <a href="valuation.html">Valuation</a>
     </div>
   </nav>
@@ -188,7 +191,6 @@
   </div>
 
   <script>
-    // --- Logica Galerie ---
     let currentSlideIndex = 0;
     let currentImages = [];
 
@@ -216,25 +218,20 @@
         document.getElementById("modalImage").src = currentImages[index];
     }
 
-    // --- Logica Pop-Up About ---
     function openAbout(buttonElement) {
-        // Găsește cardul proprietății pe care am dat click
         const card = buttonElement.closest('.property-item');
-        // Ia codul HTML ascuns de acolo
         const aboutData = card.querySelector('.about-data').innerHTML;
         
-        // Baga-l in Pop-up și deschide
         document.getElementById('aboutContentInject').innerHTML = aboutData;
         document.getElementById('aboutModal').style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Opreste scroll-ul site-ului
+        document.body.style.overflow = 'hidden'; 
     }
 
     function closeAbout() {
         document.getElementById('aboutModal').style.display = 'none';
-        document.body.style.overflow = 'auto'; // Reporneste scroll-ul site-ului
+        document.body.style.overflow = 'auto'; 
     }
 
-    // --- Inchidere la click in afara ferestrelor ---
     window.onclick = function(event) {
         let galleryModal = document.getElementById("galleryModal");
         let aboutModal = document.getElementById("aboutModal");
