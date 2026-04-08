@@ -1,8 +1,10 @@
 :root {
   --bg-light: #f9f7f2;          
+  --bg-card: #f2efe9; 
   --text-dark: #1a1a1a; 
+  --text-muted: #555555; 
   --gold-accent: #b2945e;   
-  --line-color: rgba(0, 0, 0, 0.06);
+  --line-color: rgba(0, 0, 0, 0.08);
 }
 
 /* RESET GENERAL */
@@ -10,90 +12,287 @@
 html, body { width: 100%; overflow-x: hidden; background-color: var(--bg-light); font-family: 'Montserrat', sans-serif; color: var(--text-dark); -webkit-font-smoothing: antialiased; }
 
 /* NAVBAR */
-.navbar { position: absolute; top: 0; width: 100%; padding: 50px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
-.nav-logo { font-family: 'Marcellus', serif; font-size: 0.8rem; letter-spacing: 5px; color: var(--text-dark); text-transform: uppercase; }
-.nav-links a { font-size: 0.5rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-dark); margin-left: 25px; opacity: 0.4; transition: 0.8s ease; }
+.navbar { position: absolute; top: 0; width: 100%; padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 100; transition: background 0.3s; }
+.nav-logo { font-family: 'Marcellus', serif; font-size: 0.9rem; letter-spacing: 5px; color: var(--text-dark); text-transform: uppercase; font-weight: 600;}
+.nav-links a { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-dark); margin-left: 30px; opacity: 0.8; transition: 0.4s ease; font-weight: 500; }
 .nav-links a:hover { opacity: 1; color: var(--gold-accent); }
 
-/* HERO */
-.hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; }
-.hero-brand { font-family: 'Marcellus', serif; font-size: clamp(1.8rem, 8vw, 3.5rem); letter-spacing: 12px; text-transform: uppercase; margin-bottom: 20px; }
-.hero-slogan { font-size: 0.55rem; letter-spacing: 5px; text-transform: uppercase; color: #aaa; }
+/* Adaptare Navbar pt Hero Întunecat */
+.hero-nav .nav-logo, .hero-nav .nav-links a { color: #fff; }
+.hero-nav .nav-links a:hover { color: var(--gold-accent); }
 
-/* PHILOSOPHY */
-.philosophy-section { padding: 120px 10%; background: #fff; text-align: center; border-bottom: 1px solid var(--line-color); }
-.philosophy-title { font-family: 'Marcellus', serif; font-size: clamp(1.1rem, 4vw, 1.8rem); margin: 30px auto; max-width: 800px; font-weight: 400; line-height: 1.6; }
-.philosophy-text { font-size: 0.7rem; color: #888; max-width: 600px; margin: 0 auto; line-height: 2; font-weight: 300; }
+/* HERO - Aici s-a actualizat sursa imaginii locale */
+.hero { 
+    position: relative;
+    height: 100vh; 
+    background-image: url('img/1.png');
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 0 10%; 
+}
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.hero-brand { font-family: 'Marcellus', serif; color: #fff; font-size: clamp(2rem, 8vw, 4rem); letter-spacing: 12px; text-transform: uppercase; margin-bottom: 20px; }
+.hero-slogan { font-size: 0.65rem; letter-spacing: 5px; text-transform: uppercase; color: #eaeaea; }
+
+/* PHILOSOPHY (Split Layout) */
+.philosophy-section { display: grid; grid-template-columns: 1fr 1fr; background: #fff; border-bottom: 1px solid var(--line-color); }
+.philosophy-image { background-size: cover; background-position: center; min-height: 600px; }
+.philosophy-content { padding: 100px 10%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.philosophy-title { font-family: 'Marcellus', serif; font-size: clamp(1.2rem, 3vw, 1.8rem); margin: 30px 0; font-weight: 400; line-height: 1.6; }
+.philosophy-text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.9; font-weight: 300; }
 
 /* SERVICES */
 .services-section { padding: 100px 10%; background: #fff; }
 .services-header { text-align: center; margin-bottom: 60px; }
-.services-main-title { font-family: 'Marcellus', serif; font-size: 1.5rem; margin-top: 20px; font-weight: 400; }
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-.service-item h3 { font-family: 'Marcellus'; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 15px; text-transform: uppercase; }
-.service-item p { font-size: 0.65rem; color: #888; line-height: 1.8; }
+.services-main-title { font-family: 'Marcellus', serif; font-size: 1.8rem; margin-top: 20px; font-weight: 400; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.service-item { background: var(--bg-card); padding: 50px 30px; text-align: center; transition: transform 0.5s ease; }
+.service-item:hover { transform: translateY(-5px); }
+.service-item h3 { font-family: 'Marcellus'; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase; }
+.service-item p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; }
 
 /* PROPERTIES GRID */
 .property-grid { display: grid; grid-template-columns: 1fr 1fr; background-color: var(--line-color); gap: 1px; }
 .property-item { background: var(--bg-light); overflow: hidden; }
-.prop-image-container { width: 100%; height: 550px; overflow: hidden; }
+.prop-image-container { width: 100%; height: 500px; overflow: hidden; position: relative; }
 .prop-image { width: 100%; height: 100%; background-size: cover; background-position: center; transition: 2.5s cubic-bezier(0.15, 0, 0.15, 1); }
 .property-item:hover .prop-image { transform: scale(1.05); }
 .prop-content { padding: 60px 10%; text-align: center; }
-.prop-name { font-family: 'Marcellus'; font-size: 1.1rem; margin: 15px 0; font-weight: 400; }
-.prop-price { font-size: 0.7rem; letter-spacing: 2px; color: var(--text-dark); margin-bottom: 25px; display: block; }
+.prop-name { font-family: 'Marcellus'; font-size: 1.3rem; margin: 15px 0; font-weight: 400; }
+.prop-price { font-size: 0.8rem; letter-spacing: 2px; color: var(--text-dark); margin-bottom: 25px; display: block; font-weight: 500;}
 
 /* BLACK BOOK */
-.black-book { padding: 100px 10%; background: #1a1a1a; color: #fff; text-align: center; display: flex; justify-content: center; }
-.black-book-inner { border: 1px solid rgba(255,255,255,0.1); padding: 80px 20px; width: 100%; max-width: 800px; }
-.black-book h2 { font-family: 'Marcellus'; font-size: 1.3rem; letter-spacing: 6px; text-transform: uppercase; margin-bottom: 20px; }
-.black-book p { font-size: 0.55rem; letter-spacing: 3px; color: #666; text-transform: uppercase; margin-bottom: 40px; }
-.black-book-btn { color: #fff !important; border-bottom-color: rgba(255,255,255,0.3) !important; }
+.black-book { padding: 120px 10%; background: #111; color: #fff; text-align: center; display: flex; justify-content: center; }
+.black-book-inner { border: 1px solid rgba(255,255,255,0.15); padding: 80px 20px; width: 100%; max-width: 800px; }
+.black-book h2 { font-family: 'Marcellus'; font-size: 1.5rem; letter-spacing: 6px; text-transform: uppercase; margin-bottom: 20px; }
+.black-book p { font-size: 0.7rem; letter-spacing: 3px; color: #aaa; text-transform: uppercase; margin-bottom: 40px; line-height: 1.6; }
+.black-book-btn { color: #fff !important; border-bottom-color: rgba(255,255,255,0.4) !important; }
 
 /* CONCIERGE */
-.concierge-section { padding: 100px 10%; background: #fdfcf9; border-top: 1px solid var(--line-color); }
-.concierge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; text-align: center; }
-.concierge-item h4 { font-family: 'Marcellus'; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
-.concierge-item p { font-size: 0.6rem; color: #999; line-height: 1.8; }
+.concierge-section { padding: 100px 10%; background: var(--bg-light); border-top: 1px solid var(--line-color); }
+.concierge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; }
+.concierge-item { background: #fff; padding: 50px 30px; border: 1px solid var(--line-color); }
+.concierge-item h4 { font-family: 'Marcellus'; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
+.concierge-item p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; }
+
+/* TRUST BADGES */
+.trust-badges { padding: 80px 10%; background: #fff; text-align: center; border-top: 1px solid var(--line-color); }
+.trust-logos { display: flex; justify-content: center; align-items: center; gap: 50px; margin-top: 30px; opacity: 0.4; }
+.trust-logos span { font-family: 'Marcellus', serif; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 3px; }
 
 /* FOOTER */
 .footer-contact { padding: 100px 10%; text-align: center; background: #fff; border-top: 1px solid var(--line-color); }
-.footer-logo { font-family: 'Marcellus'; font-size: 1.2rem; letter-spacing: 8px; text-transform: uppercase; }
-.contact-address { font-size: 0.6rem; letter-spacing: 2px; color: #888; text-transform: uppercase; line-height: 2; margin: 30px 0; }
+.footer-logo { font-family: 'Marcellus'; font-size: 1.4rem; letter-spacing: 8px; text-transform: uppercase; }
+.contact-address { font-size: 0.75rem; letter-spacing: 2px; color: var(--text-muted); text-transform: uppercase; line-height: 2; margin: 30px 0; }
 .contact-actions { display: flex; justify-content: center; gap: 30px; }
-.copyright { margin-top: 60px; font-size: 0.4rem; letter-spacing: 3px; color: #ccc; text-transform: uppercase; }
+.copyright { margin-top: 60px; font-size: 0.5rem; letter-spacing: 3px; color: #aaa; text-transform: uppercase; }
 
-/* HELPERS */
-.btn-minimal { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 3px; color: var(--text-dark); padding-bottom: 5px; border-bottom: 1px solid rgba(0,0,0,0.1); display: inline-block; transition: 1.2s cubic-bezier(0.15, 0, 0.15, 1); cursor: pointer; }
-.btn-minimal:hover { letter-spacing: 5px; color: var(--gold-accent); border-bottom-color: var(--gold-accent); }
-.section-subtitle { font-size: 0.5rem; letter-spacing: 5px; color: var(--gold-accent); text-transform: uppercase; }
+/* HELPERS & BUTTONS */
+.btn-minimal { font-size: 0.65rem; font-weight: 500; text-transform: uppercase; letter-spacing: 3px; color: var(--text-dark); padding-bottom: 5px; border-bottom: 1px solid rgba(0,0,0,0.2); display: inline-block; transition: 0.5s ease; cursor: pointer; }
+.btn-minimal:hover { letter-spacing: 4px; color: var(--gold-accent); border-bottom-color: var(--gold-accent); }
 
-/* --- RESPONSIVE FIXES (EXCLUSIV PENTRU TELEFON) --- */
-@media (max-width: 850px) {
+.btn-solid { background: var(--text-dark); color: #fff; font-size: 0.65rem; font-weight: 500; text-transform: uppercase; letter-spacing: 3px; padding: 18px 35px; display: inline-block; transition: background 0.4s ease; border: 1px solid var(--text-dark); }
+.btn-solid:hover { background: var(--gold-accent); border-color: var(--gold-accent); color: #fff; }
+
+.section-subtitle { font-size: 0.6rem; letter-spacing: 5px; color: var(--gold-accent); text-transform: uppercase; font-weight: 500; }
+
+/* --- RESPONSIVE FIXES (PENTRU TELEFON/TABLETĂ) --- */
+@media (max-width: 950px) {
   html, body { overflow-x: hidden; position: relative; width: 100%; }
 
-  .navbar { flex-direction: column; gap: 20px; padding: 40px 0; align-items: center; text-align: center; }
-  .nav-links { margin-left: 0; width: 100%; display: flex; justify-content: center; }
-  .nav-links a { margin: 0 10px; font-size: 0.45rem; }
+  .navbar { padding: 30px 5%; flex-direction: column; gap: 15px; background: rgba(255,255,255,0.95) !important; }
+  .nav-logo, .hero-nav .nav-logo { color: var(--text-dark); }
+  .nav-links a, .hero-nav .nav-links a { color: var(--text-dark); margin: 0 10px; font-size: 0.55rem; }
 
-  .hero { padding: 0 5%; align-items: center; }
-  .hero-brand { letter-spacing: 6px; text-align: center; }
+  .hero-brand { font-size: 2.5rem; letter-spacing: 6px; }
+  
+  .philosophy-section { grid-template-columns: 1fr; }
+  .philosophy-image { min-height: 400px; }
+  .philosophy-content { padding: 60px 5%; text-align: center; align-items: center; }
 
-  .philosophy-section, .services-section, .concierge-section, .footer-contact { 
-    padding: 80px 5%; 
+  .services-section, .concierge-section, .trust-badges, .footer-contact, .black-book { padding: 80px 5%; }
+  
+  .services-grid, .property-grid, .concierge-grid { grid-template-columns: 1fr; gap: 30px; }
+  
+  .prop-image-container { height: 400px; }
+  .prop-content { padding: 40px 5%; }
+
+  .trust-logos { flex-direction: column; gap: 30px; }
+  .contact-actions { flex-direction: column; gap: 20px; align-items: center; }
+}
+
+
+/* ========================================================
+   MODAL & SLIDESHOW STYLES (NOU ADĂUGATE)
+======================================================== */
+.modal-trigger { cursor: pointer; }
+
+/* Textul care apare peste poză la Hover */
+.gallery-overlay {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.7);
+    padding: 15px 30px;
+    border: 1px solid var(--gold-accent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none; /* Clicul trece prin el spre div-ul părinte */
+    z-index: 10;
+}
+.prop-image-container:hover .gallery-overlay { opacity: 1; }
+
+/* Fundalul Modalului (Full Screen Black Overlay) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    padding-top: 5vh; 
+    left: 0; top: 0; width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.95);
+    backdrop-filter: blur(8px);
+}
+
+/* Conținutul (Poza) */
+.modal-content {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-  }
-  
-  .services-grid, .property-grid, .concierge-grid { grid-template-columns: 1fr; gap: 40px; width: 100%; }
-  
-  .service-item, .concierge-item { display: flex; flex-direction: column; align-items: center; width: 100%; }
+    height: 85vh;
+}
+.modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    animation: fadeEffect 0.6s ease-in-out;
+}
+@keyframes fadeEffect {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
 
-  .prop-image-container { height: 350px; }
-  .prop-content { padding: 40px 5%; width: 100%; }
+/* Butonul X (Închidere) */
+.close-modal {
+    position: absolute;
+    top: 30px; right: 50px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 200;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1001;
+}
+.close-modal:hover { color: var(--gold-accent); }
 
-  .contact-actions { flex-direction: column; gap: 25px; align-items: center; width: 100%; }
-  .btn-minimal { margin: 0 auto; }
+/* Săgețile de Navigație (Stânga / Dreapta) */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 20px;
+    color: white;
+    font-weight: 300;
+    font-size: 30px;
+    transition: 0.3s;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+}
+.prev { left: 0; border-radius: 0 4px 4px 0; }
+.next { right: 0; border-radius: 4px 0 0 4px; }
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); color: var(--gold-accent); }
+
+@media (max-width: 768px) {
+    .close-modal { top: 15px; right: 20px; font-size: 30px; }
+    .prev, .next { font-size: 20px; padding: 15px; }
+}
+/* ========================================================
+   POP-UP DETALII (ABOUT MODAL)
+======================================================== */
+.about-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; top: 0; 
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8); 
+    backdrop-filter: blur(5px);
+}
+
+.about-modal-content {
+    background-color: #111; /* Negru elegant */
+    color: #fff;
+    margin: 8vh auto;
+    padding: 60px 50px;
+    border: 1px solid var(--gold-accent);
+    width: 90%;
+    max-width: 650px;
+    max-height: 80vh;
+    overflow-y: auto; /* Permite scroll daca e text mult */
+    position: relative;
+    text-align: left;
+}
+
+/* Stilizarea scrollbar-ului din interiorul pop-up-ului */
+.about-modal-content::-webkit-scrollbar {
+    width: 4px;
+}
+.about-modal-content::-webkit-scrollbar-thumb {
+    background: var(--gold-accent);
+}
+
+.close-about {
+    position: absolute; 
+    top: 20px; right: 30px;
+    color: #fff; 
+    font-size: 35px; 
+    font-weight: 200; 
+    cursor: pointer; 
+    transition: color 0.3s;
+}
+.close-about:hover { color: var(--gold-accent); }
+
+/* Aranjarea detaliilor (Teren, An constructie etc) sub forma de lista grid */
+.about-specs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 20px 0;
+}
+
+.about-specs-grid p {
+    font-size: 0.85rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.about-specs-grid p strong {
+    color: var(--gold-accent);
+    font-weight: 400;
+    margin-right: 5px;
 }

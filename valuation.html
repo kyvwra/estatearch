@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ASSET VALUATION | ESTATE ARCH.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
     .valuation-container {
@@ -21,30 +21,32 @@
       padding: 15px 0;
       margin-bottom: 30px;
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.7rem;
+      font-size: 0.9rem; /* Mărit lizibilitatea */
+      font-weight: 500;
       letter-spacing: 2px;
       text-transform: uppercase;
+      color: var(--text-dark);
       outline: none;
       transition: border-color 0.8s;
     }
     .val-input:focus { border-bottom-color: var(--gold-accent); }
-    ::placeholder { color: #ccc; }
+    ::placeholder { color: #aaa; font-weight: 300; }
   </style>
 </head>
 <body>
 
-  <nav class="navbar">
+  <nav class="navbar" style="position: absolute; top: 0; width: 100%; z-index: 100;">
     <a href="index.html" class="nav-logo">ESTATE ARCH.</a>
     <div class="nav-links">
       <a href="sale.html">Sale</a>
       <a href="rent.html">Rent</a>
-      <a href="valuation.html" style="color: var(--gold-accent);">Valuation</a>
+      <a href="valuation.html" style="color: var(--gold-accent); opacity: 1;">Valuation</a>
     </div>
   </nav>
 
   <div class="valuation-container">
-    <span style="font-size: 0.5rem; letter-spacing: 5px; color: var(--gold-accent); text-transform: uppercase;">Expert Opinion</span>
-    <h1 style="font-family: 'Marcellus', serif; font-size: 1.8rem; margin: 20px 0 60px; letter-spacing: 5px;">REQUEST VALUATION</h1>
+    <span style="font-size: 0.7rem; letter-spacing: 5px; color: var(--gold-accent); text-transform: uppercase; font-weight: 500;">Expert Opinion</span>
+    <h1 style="font-family: 'Marcellus', serif; font-size: clamp(1.8rem, 4vw, 2.5rem); margin: 20px 0 60px; letter-spacing: 5px;">REQUEST VALUATION</h1>
     
     <form action="#">
       <input type="text" class="val-input" placeholder="Full Name" required>
@@ -53,11 +55,11 @@
       <input type="text" class="val-input" placeholder="Estimated Surface (sqm)">
       
       <div style="margin-top: 40px;">
-        <button type="submit" class="btn-minimal" style="background: transparent; border-top: none; border-left: none; border-right: none;">Submit Inquiry</button>
+        <button type="submit" class="btn-solid" style="cursor: pointer;">Submit Inquiry</button>
       </div>
     </form>
     
-    <p style="font-size: 0.45rem; color: #bbb; margin-top: 60px; letter-spacing: 2px; text-transform: uppercase;">
+    <p style="font-size: 0.7rem; color: var(--text-muted); margin-top: 60px; letter-spacing: 2px; text-transform: uppercase; line-height: 1.8;">
       Our representative will contact you within 24 hours for a private consultation.
     </p>
   </div>

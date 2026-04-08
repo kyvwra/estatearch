@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ESTATE ARCH. | Established 2026</title>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <nav class="navbar">
+  <nav class="navbar hero-nav">
     <a href="index.html" class="nav-logo">ESTATE ARCH.</a>
     <div class="nav-links">
       <a href="sale.html">Sale</a>
@@ -19,19 +19,24 @@
   </nav>
 
   <header class="hero">
-    <h1 class="hero-brand">ESTATE ARCH.</h1>
-    <p class="hero-slogan">Established 2026 • Private Real Estate</p>
-    <a href="sale.html" class="btn-minimal" style="margin-top: 60px;">Explore Collection</a>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-brand">ESTATE ARCH.</h1>
+        <p class="hero-slogan">Established 2026 • Private Real Estate</p>
+        <a href="sale.html" class="btn-solid" style="margin-top: 40px;">Explore Collection</a>
+    </div>
   </header>
 
-  <section class="philosophy-section">
-    <span class="section-subtitle">Philosophy</span>
-    <h2 class="philosophy-title">
-        "Nu colecționăm proprietăți, curatoriem spații care definesc o moștenire."
-    </h2>
-    <p class="philosophy-text">
-        La Estate Arch., credem că luxul adevărat nu strigă. Este discret, tactil și atemporal. Selectăm doar activele care posedă o integritate arhitecturală rară.
-    </p>
+  <section class="philosophy-section" style="display: flex; justify-content: center; align-items: center; text-align: center; padding: 120px 5%;">
+    <div class="philosophy-content" style="max-width: 800px; margin: 0 auto;">
+        <span class="section-subtitle" style="display: block; margin-bottom: 20px;">Philosophy</span>
+        <h2 class="philosophy-title" style="margin-bottom: 30px;">
+            "Nu colecționăm proprietăți, curatoriem spații care definesc o moștenire."
+        </h2>
+        <p class="philosophy-text">
+            La Estate Arch., credem că luxul adevărat nu strigă. Este discret, tactil și atemporal. Selectăm doar activele care posedă o integritate arhitecturală rară, oferind clienților noștri nu doar un simplu spațiu de locuit, ci un refugiu vizual.
+        </p>
+    </div>
   </section>
 
   <section class="services-section">
@@ -42,15 +47,15 @@
     <div class="services-grid">
       <div class="service-item">
         <h3>Property Sales</h3>
-        <p>Curatoriem o selecție limitată de proprietăți rezidențiale, asigurând o tranzacție discretă.</p>
+        <p>Curatoriem o selecție limitată de proprietăți rezidențiale, asigurând o tranzacție discretă și o potrivire perfectă între arhitectură și stilul tău de viață.</p>
       </div>
       <div class="service-item">
         <h3>Luxe Rentals</h3>
-        <p>Acces către cele mai exclusiviste reședințe disponibile pentru închiriere pe termen lung.</p>
+        <p>Acces exclusiv către cele mai rafinate reședințe disponibile pentru închiriere pe termen lung, complet pregătite pentru mutare imediată.</p>
       </div>
       <div class="service-item">
         <h3>Asset Valuation</h3>
-        <p>Analiză riguroasă a pieței și evaluări imobiliare precise bazate pe date actuale.</p>
+        <p>Analiză riguroasă a pieței și evaluări imobiliare precise, bazate pe date actuale și standarde internaționale de valorificare a activelor de lux.</p>
       </div>
     </div>
   </section>
@@ -58,7 +63,7 @@
   <section class="property-grid">
     <article class="property-item">
       <div class="prop-image-container">
-        <div class="prop-image" style="background-image: url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+        <div class="prop-image" style="background-image: url('img/Vila Monolith/3.png');"></div>
       </div>
       <div class="prop-content">
         <span class="prop-city">București • Nord</span>
@@ -67,9 +72,10 @@
         <a href="sale.html" class="btn-minimal">View Details</a>
       </div>
     </article>
+    
     <article class="property-item">
       <div class="prop-image-container">
-        <div class="prop-image" style="background-image: url('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+        <div class="prop-image" style="background-image: url('img/Glass Pavilion/1.png');"></div>
       </div>
       <div class="prop-content">
         <span class="prop-city">Cluj-Napoca • Central</span>
@@ -89,19 +95,32 @@
   </section>
 
   <section class="concierge-section">
+    <div class="services-header">
+        <span class="section-subtitle">Excellence</span>
+        <h2 class="services-main-title">Concierge & Management</h2>
+    </div>
     <div class="concierge-grid">
         <div class="concierge-item">
             <h4>Interior Curation</h4>
-            <p>Colaborăm cu studiouri de design premiate pentru a personaliza spațiul conform viziunii tale.</p>
+            <p>Colaborăm cu studiouri de design premiate pentru a personaliza spațiul conform viziunii tale, de la mobilier la artă.</p>
         </div>
         <div class="concierge-item">
             <h4>Legal Discretion</h4>
-            <p>Tranzacții securizate și structurate prin parteneri juridici specializați în active de lux.</p>
+            <p>Tranzacții securizate și structurate prin parteneri juridici specializați în gestionarea activelor de lux.</p>
         </div>
         <div class="concierge-item">
             <h4>Asset Management</h4>
-            <p>Administrare completă a proprietății pentru a asigura conservarea valorii pe termen lung.</p>
+            <p>Administrare completă a proprietății pentru a asigura conservarea valorii pe termen lung și liniștea ta absolută.</p>
         </div>
+    </div>
+  </section>
+
+  <section class="trust-badges">
+    <span class="section-subtitle">Trusted Partners</span>
+    <div class="trust-logos">
+        <span>Grupul Juridic</span>
+        <span>Arhitecți Asociați</span>
+        <span>Banca de Investiții</span>
     </div>
   </section>
 

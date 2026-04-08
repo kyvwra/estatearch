@@ -4,18 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FOR RENT | ESTATE ARCH.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Păstrăm stilul tău pentru specificații și descriere */
-    .prop-specs-inline { display: flex; justify-content: center; gap: 15px; margin-top: 15px; font-size: 0.5rem; letter-spacing: 1px; color: #999; text-transform: uppercase; }
-    .prop-description-hidden { max-height: 0; overflow: hidden; transition: all 0.8s ease; font-size: 0.65rem; line-height: 2; color: #888; opacity: 0; padding: 0 10%; }
-    .property-item:hover .prop-description-hidden, .property-item:focus-within .prop-description-hidden { max-height: 100px; margin-top: 15px; opacity: 1; }
+    .prop-specs-inline { display: flex; justify-content: center; gap: 15px; margin-top: 15px; font-size: 0.75rem; font-weight: 500; letter-spacing: 1px; color: var(--text-muted); text-transform: uppercase; }
+    .prop-description-hidden { max-height: 0; overflow: hidden; transition: all 0.8s ease; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted); opacity: 0; padding: 0 10%; }
+    .property-item:hover .prop-description-hidden, .property-item:focus-within .prop-description-hidden { max-height: 150px; margin-top: 15px; opacity: 1; }
   </style>
 </head>
 <body>
 
-  <nav class="navbar" style="background: rgba(255,255,255,0.95); position: fixed; border-bottom: 1px solid var(--line-color); padding: 25px 5%;">
+  <nav class="navbar" style="background: rgba(255,255,255,0.95); position: fixed; border-bottom: 1px solid var(--line-color); padding: 25px 5%; z-index: 100;">
     <a href="index.html" class="nav-logo">ESTATE ARCH.</a>
     <div class="nav-links">
       <a href="sale.html">Sale</a>
@@ -25,71 +24,226 @@
   </nav>
 
   <header style="padding: 160px 10% 60px; text-align: center;">
-    <h1 style="font-family: 'Marcellus', serif; font-size: 2rem; letter-spacing: 8px; text-transform: uppercase;">Rental Collection</h1>
-    <p style="font-size: 0.55rem; letter-spacing: 4px; color: #aaa; margin-top: 15px; text-transform: uppercase;">Exclusive Residences for Lease</p>
+    <h1 style="font-family: 'Marcellus', serif; font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: 8px; text-transform: uppercase;">Rental Collection</h1>
+    <p style="font-size: 0.75rem; letter-spacing: 4px; color: var(--text-muted); margin-top: 15px; text-transform: uppercase; font-weight: 500;">Exclusive Residences for Lease</p>
   </header>
 
   <section class="property-grid">
+    
     <article class="property-item" tabindex="0">
-      <div class="prop-image-container">
-        <div class="prop-image" style="background-image: url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+      <div class="prop-image-container modal-trigger" onclick="openModal(['img/The Urban Loft/1.png', 'img/The Urban Loft/2.png', 'img/The Urban Loft/3.png', 'img/The Urban Loft/4.png', 'img/The Urban Loft/5.png'])">
+        <div class="prop-image" style="background-image: url('img/The Urban Loft/1.png');"></div>
+        <div class="gallery-overlay">View Gallery</div>
       </div>
       <div class="prop-content">
-        <span class="prop-city">București • Downtown</span>
+        <span class="prop-city section-subtitle">Riviera • Promenadă</span>
         <h2 class="prop-name">The Urban Loft</h2>
         <div class="prop-specs-inline"><span>140 MP</span> | <span>2 Camere</span></div>
         <span class="prop-price" style="margin-top: 15px; display: block;">€3,500 / month</span>
-        <div class="prop-description-hidden">Design industrial rafinat cu ferestre imense, complet mobilat de designer și servicii de concierge 24/7.</div>
-        <a href="mailto:office@estatearch.com?subject=Inquiry: Urban Loft Rent" class="btn-minimal">Inquire</a>
+        
+        <div style="margin-top: 25px; display: flex; justify-content: center; gap: 30px;">
+            <span class="btn-minimal" onclick="openAbout(this)">About</span>
+            <a href="mailto:office@estatearch.com?subject=Inquiry: Urban Loft Rent" class="btn-minimal">Inquire</a>
+        </div>
+
+        <div class="about-data" style="display: none;">
+            <span class="section-subtitle" style="display: block; margin-bottom: 10px;">Lease Dossier</span>
+            <h3 style="font-family: 'Marcellus', serif; font-size: 1.8rem; margin-bottom: 30px; letter-spacing: 2px;">The Urban Loft</h3>
+            <div class="about-specs-grid">
+                <p><strong>Status:</strong> Disponibil Imediat</p>
+                <p><strong>Vedere:</strong> Panoramică, orientare spre mare</p>
+                <p><strong>Finisaje:</strong> Premium, design minimalist și luminos</p>
+                <p><strong>Parcare:</strong> 1 loc asigurat subteran</p>
+                <p><strong>Climatizare:</strong> Sistem centralizat silențios</p>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.85rem; line-height: 1.9; color: #bbb;">
+                Un spațiu fluid, luminos, perfect pentru cei care doresc o reședință premium la malul mării. Ferestrele ample oferă o priveliște excelentă asupra coastei, iar designul interior aerisit pune în valoare lumina naturală pe tot parcursul zilei.
+            </p>
+        </div>
       </div>
     </article>
 
     <article class="property-item" tabindex="0">
-      <div class="prop-image-container">
-        <div class="prop-image" style="background-image: url('https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+      <div class="prop-image-container modal-trigger" onclick="openModal(['img/Nordic Wellness Villa/1.png', 'img/Nordic Wellness Villa/2.png', 'img/Nordic Wellness Villa/3.png', 'img/Nordic Wellness Villa/4.png', 'img/Nordic Wellness Villa/5.png'])">
+        <div class="prop-image" style="background-image: url('img/Nordic Wellness Villa/1.png');"></div>
+        <div class="gallery-overlay">View Gallery</div>
       </div>
       <div class="prop-content">
-        <span class="prop-city">București • Nord</span>
-        <h2 class="prop-name">Nordic Wellness Villa</h2>
+        <span class="prop-city section-subtitle">Riviera • Nord</span>
+        <h2 class="prop-name">Coastal Wellness Villa</h2>
         <div class="prop-specs-inline"><span>380 MP</span> | <span>5 Camere</span></div>
         <span class="prop-price" style="margin-top: 15px; display: block;">€6,800 / month</span>
-        <div class="prop-description-hidden">Vila dispune de spa privat, piscină interioară și o grădină japoneză minimalistă pentru relaxare totală.</div>
-        <a href="mailto:office@estatearch.com?subject=Inquiry: Nordic Villa Rent" class="btn-minimal">Inquire</a>
+        
+        <div style="margin-top: 25px; display: flex; justify-content: center; gap: 30px;">
+            <span class="btn-minimal" onclick="openAbout(this)">About</span>
+            <a href="mailto:office@estatearch.com?subject=Inquiry: Coastal Villa Rent" class="btn-minimal">Inquire</a>
+        </div>
+
+        <div class="about-data" style="display: none;">
+            <span class="section-subtitle" style="display: block; margin-bottom: 10px;">Lease Dossier</span>
+            <h3 style="font-family: 'Marcellus', serif; font-size: 1.8rem; margin-bottom: 30px; letter-spacing: 2px;">Coastal Wellness Villa</h3>
+            <div class="about-specs-grid">
+                <p><strong>Disponibilitate:</strong> Termen lung</p>
+                <p><strong>Exterior:</strong> Piscină exterioară, zonă de lounge</p>
+                <p><strong>Grădină:</strong> Spațioasă, terasată pentru intimitate</p>
+                <p><strong>Securitate:</strong> Sistem avansat antiefracție</p>
+                <p><strong>Servicii:</strong> Mentenanță proprietate inclusă</p>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.85rem; line-height: 1.9; color: #bbb;">
+                O vilă spațioasă și elegantă, gândită pentru a oferi confortul suprem la scurtă distanță de plajă. Grădina privată și zona de relaxare exterioară creează un microclimat ideal, permițându-vă să vă bucurați de vremea blândă pe tot parcursul anului.
+            </p>
+        </div>
       </div>
     </article>
 
     <article class="property-item" tabindex="0">
-      <div class="prop-image-container">
-        <div class="prop-image" style="background-image: url('https://images.pexels.com/photos/1129413/pexels-photo-1129413.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+      <div class="prop-image-container modal-trigger" onclick="openModal(['img/The Slate Apartment/1.png', 'img/The Slate Apartment/2.png', 'img/The Slate Apartment/3.png', 'img/The Slate Apartment/4.png', 'img/The Slate Apartment/5.png'])">
+        <div class="prop-image" style="background-image: url('img/The Slate Apartment/1.png');"></div>
+        <div class="gallery-overlay">View Gallery</div>
       </div>
       <div class="prop-content">
-        <span class="prop-city">Cluj-Napoca • Bună Ziua</span>
+        <span class="prop-city section-subtitle">Riviera • Marina</span>
         <h2 class="prop-name">The Slate Apartment</h2>
         <div class="prop-specs-inline"><span>95 MP</span> | <span>3 Camere</span></div>
         <span class="prop-price" style="margin-top: 15px; display: block;">€2,100 / month</span>
-        <div class="prop-description-hidden">Apartament cu finisaje premium din ardezie și lemn masiv, oferind o priveliște panoramică asupra orașului.</div>
-        <a href="mailto:office@estatearch.com?subject=Inquiry: Slate Apartment Rent" class="btn-minimal">Inquire</a>
+        
+        <div style="margin-top: 25px; display: flex; justify-content: center; gap: 30px;">
+            <span class="btn-minimal" onclick="openAbout(this)">About</span>
+            <a href="mailto:office@estatearch.com?subject=Inquiry: Slate Apartment Rent" class="btn-minimal">Inquire</a>
+        </div>
+
+        <div class="about-data" style="display: none;">
+            <span class="section-subtitle" style="display: block; margin-bottom: 10px;">Lease Dossier</span>
+            <h3 style="font-family: 'Marcellus', serif; font-size: 1.8rem; margin-bottom: 30px; letter-spacing: 2px;">The Slate Apartment</h3>
+            <div class="about-specs-grid">
+                <p><strong>Status:</strong> Disponibil Imediat</p>
+                <p><strong>Vedere:</strong> Orientare excelentă, ferestre mari</p>
+                <p><strong>Terasă:</strong> Spațioasă, ideală pentru dining</p>
+                <p><strong>Parcare:</strong> 2 locuri de parcare asigurate</p>
+                <p><strong>Design:</strong> Modern, accente de piatră naturală</p>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.85rem; line-height: 1.9; color: #bbb;">
+                Situat la etajele superioare ale unui complex rezidențial modern, apartamentul oferă o perspectivă spectaculoasă asupra apei. Mobilierul cu linii curate și spațiile bine compartimentate îl fac alegerea perfectă pentru profesioniști sau pentru cei care doresc o evadare confortabilă pe termen lung.
+            </p>
+        </div>
       </div>
     </article>
 
     <article class="property-item" tabindex="0">
-      <div class="prop-image-container">
-        <div class="prop-image" style="background-image: url('https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&w=1200');"></div>
+      <div class="prop-image-container modal-trigger" onclick="openModal(['img/Pine Retreat Lodge/1.png', 'img/Pine Retreat Lodge/2.png', 'img/Pine Retreat Lodge/3.png', 'img/Pine Retreat Lodge/4.png', 'img/Pine Retreat Lodge/5.png'])">
+        <div class="prop-image" style="background-image: url('img/Pine Retreat Lodge/1.png');"></div>
+        <div class="gallery-overlay">View Gallery</div>
       </div>
       <div class="prop-content">
-        <span class="prop-city">Poiana Brașov • Forest</span>
-        <h2 class="prop-name">Pine Retreat Lodge</h2>
+        <span class="prop-city section-subtitle">Riviera • Sud</span>
+        <h2 class="prop-name">Sand Retreat Lodge</h2>
         <div class="prop-specs-inline"><span>220 MP</span> | <span>4 Camere</span></div>
         <span class="prop-price" style="margin-top: 15px; display: block;">€4,200 / month</span>
-        <div class="prop-description-hidden">O experiență montană de lux, cu șemineu suspendat și acces direct către traseele de ski.</div>
-        <a href="mailto:office@estatearch.com?subject=Inquiry: Pine Retreat Rent" class="btn-minimal">Inquire</a>
+        
+        <div style="margin-top: 25px; display: flex; justify-content: center; gap: 30px;">
+            <span class="btn-minimal" onclick="openAbout(this)">About</span>
+            <a href="mailto:office@estatearch.com?subject=Inquiry: Sand Retreat Rent" class="btn-minimal">Inquire</a>
+        </div>
+
+        <div class="about-data" style="display: none;">
+            <span class="section-subtitle" style="display: block; margin-bottom: 10px;">Lease Dossier</span>
+            <h3 style="font-family: 'Marcellus', serif; font-size: 1.8rem; margin-bottom: 30px; letter-spacing: 2px;">Sand Retreat Lodge</h3>
+            <div class="about-specs-grid">
+                <p><strong>Disponibilitate:</strong> Închiriere pe Sezon sau Anuală</p>
+                <p><strong>Amplasament:</strong> Aproape de plajă, zonă liniștită</p>
+                <p><strong>Dotări:</strong> Living open-space, bucătărie modernă</p>
+                <p><strong>Cazare:</strong> Spațiu optimizat pentru familii</p>
+                <p><strong>Exterior:</strong> Terasă umbrită, ideală pentru relaxare</p>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.85rem; line-height: 1.9; color: #bbb;">
+                Conceput pentru a fi refugiul estival ideal. Construit cu materiale naturale și o deschidere vitrată impresionantă, acest spațiu aerisit invită marea înăuntru. Terasa generoasă este locul perfect pentru a vă bucura de serile calde și de briza marină.
+            </p>
+        </div>
       </div>
     </article>
+
   </section>
 
-  <footer style="padding: 60px 5%; text-align: center; font-size: 0.4rem; letter-spacing: 4px; color: #ccc; text-transform: uppercase;">
+  <footer style="padding: 60px 5%; text-align: center; font-size: 0.6rem; letter-spacing: 4px; color: var(--text-muted); text-transform: uppercase;">
     Estate Arch. &copy; 2026 • Curated Rentals
   </footer>
+
+  <div id="galleryModal" class="modal">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="Property View">
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+  </div>
+
+  <div id="aboutModal" class="about-modal">
+    <div class="about-modal-content">
+      <span class="close-about" onclick="closeAbout()">&times;</span>
+      <div id="aboutContentInject"></div>
+    </div>
+  </div>
+
+  <script>
+    // --- Logica Galerie ---
+    let currentSlideIndex = 0;
+    let currentImages = [];
+
+    function openModal(images) {
+        currentImages = images;
+        currentSlideIndex = 0;
+        document.getElementById("galleryModal").style.display = "block";
+        document.body.style.overflow = "hidden";
+        showSlide(currentSlideIndex);
+    }
+
+    function closeModal() {
+        document.getElementById("galleryModal").style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+
+    function changeSlide(n) {
+        currentSlideIndex += n;
+        if (currentSlideIndex >= currentImages.length) { currentSlideIndex = 0; }
+        if (currentSlideIndex < 0) { currentSlideIndex = currentImages.length - 1; }
+        showSlide(currentSlideIndex);
+    }
+
+    function showSlide(index) {
+        document.getElementById("modalImage").src = currentImages[index];
+    }
+
+    // --- Logica Pop-Up About ---
+    function openAbout(buttonElement) {
+        // Găsește cardul proprietății pe care am dat click
+        const card = buttonElement.closest('.property-item');
+        // Ia codul HTML ascuns de acolo
+        const aboutData = card.querySelector('.about-data').innerHTML;
+        
+        // Baga-l in Pop-up și deschide
+        document.getElementById('aboutContentInject').innerHTML = aboutData;
+        document.getElementById('aboutModal').style.display = 'block';
+        document.body.style.overflow = 'hidden'; 
+    }
+
+    function closeAbout() {
+        document.getElementById('aboutModal').style.display = 'none';
+        document.body.style.overflow = 'auto'; 
+    }
+
+    // --- Inchidere la click in afara ferestrelor ---
+    window.onclick = function(event) {
+        let galleryModal = document.getElementById("galleryModal");
+        let aboutModal = document.getElementById("aboutModal");
+        
+        if (event.target === galleryModal) {
+            closeModal();
+        }
+        if (event.target === aboutModal) {
+            closeAbout();
+        }
+    }
+  </script>
 
 </body>
 </html>
