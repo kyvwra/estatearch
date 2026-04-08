@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar" style="background: rgba(255,255,255,0.95); position: fixed; border-bottom: 1px solid var(--line-color); padding: 25px 5%; z-index: 100;">
+  <nav class="navbar" style="position: absolute; top: 0; width: 100%; z-index: 100;">
     <a href="index.html" class="nav-logo">ESTATE ARCH.</a>
     <div class="nav-links">
       <a href="sale.html">Sale</a>
@@ -42,7 +42,7 @@
     </div>
   </section>
 
-  <section style="padding: 80px 10%; background: #fff; border-top: 1px solid var(--line-color);">
+  <section style="padding: 80px 10%; background: transparent; border-top: 1px solid var(--line-color);">
       <div style="text-align: center; margin-bottom: 60px;">
           <span class="section-subtitle">Methodology</span>
           <h2 style="font-family: 'Marcellus', serif; font-size: 1.8rem; font-weight: 400; margin-top: 10px;">Procesul de Achiziție</h2>
@@ -63,12 +63,30 @@
       </div>
   </section>
 
-  <section id="valuation" style="background: var(--bg-card); padding: 100px 5%; border-top: 1px solid var(--line-color);">
+  <section id="valuation" style="background: transparent; padding: 100px 5%; border-top: 1px solid var(--line-color);">
       <div class="valuation-container" style="margin: 0 auto;">
+        <span class="section-subtitle">Expert Opinion</span>
+        <h2 style="font-family: 'Marcellus', serif; font-size: 2rem; margin: 20px 0 60px; letter-spacing: 5px;">SOLICITĂ O EVALUARE</h2>
+        
+        <form action="#">
+          <input type="text" class="val-input" placeholder="Nume Complet" required>
+          <input type="email" class="val-input" placeholder="Adresa de E-mail" required>
+          <input type="text" class="val-input" placeholder="Locație Proprietate (Oraș / Zonă)" required>
+          <input type="text" class="val-input" placeholder="Suprafață Estimativă (MP)">
+          
+          <div style="margin-top: 40px;">
+            <button type="submit" class="btn-solid" style="width: 100%;">Trimite Solicitarea</button>
+          </div>
+        </form>
+        
+        <p style="font-size: 0.7rem; color: var(--text-muted); margin-top: 40px; letter-spacing: 2px; text-transform: uppercase; line-height: 1.8;">
+          Un reprezentant Estate Arch. te va contacta în maximum 24 de ore pentru o consultație privată.
+        </p>
+      </div>
+  </section>
 
-
-  <footer style="padding: 60px 5%; text-align: center; font-size: 0.6rem; letter-spacing: 4px; color: var(--text-muted); text-transform: uppercase;">
-    Estate Arch. &copy; 2026 • Services
+  <footer style="padding: 60px 5%; text-align: center; font-size: 0.6rem; letter-spacing: 4px; color: var(--text-muted); text-transform: uppercase; border-top: 1px solid var(--line-color);">
+    Estate Arch. &copy; 2026 • Private Advisory
   </footer>
 </body>
 </html>

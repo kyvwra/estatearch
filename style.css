@@ -27,6 +27,7 @@ html, body {
 ======================================================== */
 .navbar { position: absolute; top: 0; width: 100%; padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 100; transition: background 0.3s; }
 .nav-logo { font-family: 'Marcellus', serif; font-size: 0.9rem; letter-spacing: 5px; color: var(--text-dark); text-transform: uppercase; font-weight: 600; }
+.nav-links { display: flex; align-items: center; }
 .nav-links a { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-dark); margin-left: 30px; opacity: 0.8; transition: 0.4s ease; font-weight: 500; }
 .nav-links a:hover { opacity: 1; color: var(--gold-accent); }
 
@@ -59,23 +60,23 @@ html, body {
    CONTENT SECTIONS (Philosophy, Journal, Services)
 ======================================================== */
 /* Split Layout (Philosophy / Journal) */
-.philosophy-section { display: grid; grid-template-columns: 1fr 1fr; background: #fff; border-bottom: 1px solid var(--line-color); }
+.philosophy-section { display: grid; grid-template-columns: 1fr 1fr; background: transparent; border-bottom: 1px solid var(--line-color); }
 .philosophy-image { background-size: cover; background-position: center; min-height: 600px; }
 .philosophy-content { padding: 100px 10%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; max-width: 800px; margin: 0 auto; }
 .philosophy-title { font-family: 'Marcellus', serif; font-size: clamp(1.2rem, 3vw, 1.8rem); margin: 30px 0; font-weight: 400; line-height: 1.6; }
 .philosophy-text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.9; font-weight: 300; }
 
 /* Services Grid */
-.services-section { padding: 100px 10%; background: #fff; }
+.services-section { padding: 100px 10%; background: transparent; border-bottom: 1px solid var(--line-color); }
 .services-header { text-align: center; margin-bottom: 60px; }
 .services-main-title { font-family: 'Marcellus', serif; font-size: 1.8rem; margin-top: 20px; font-weight: 400; }
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-.service-item { background: var(--bg-card); padding: 50px 30px; text-align: center; transition: transform 0.5s ease; border: 1px solid transparent; }
+.service-item { background: transparent; padding: 50px 30px; text-align: center; transition: transform 0.5s ease; border: 1px solid var(--line-color); }
 .service-item:hover { transform: translateY(-5px); border-color: var(--gold-accent); }
 .service-item h3 { font-family: 'Marcellus', serif; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase; }
 .service-item p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; }
 
-/* Black Book */
+/* Black Book - Aceasta ramane inchisa la culoare pentru ca este sectiunea "Black" a brandului */
 .black-book { padding: 120px 10%; background: #111; color: #fff; text-align: center; display: flex; justify-content: center; }
 .black-book-inner { border: 1px solid rgba(255,255,255,0.15); padding: 80px 20px; width: 100%; max-width: 800px; }
 .black-book h2 { font-family: 'Marcellus', serif; font-size: 1.5rem; letter-spacing: 6px; text-transform: uppercase; margin-bottom: 20px; }
@@ -83,14 +84,14 @@ html, body {
 .black-book-btn { color: #fff !important; border-bottom-color: rgba(255,255,255,0.4) !important; }
 
 /* Concierge */
-.concierge-section { padding: 100px 10%; background: var(--bg-light); border-top: 1px solid var(--line-color); }
+.concierge-section { padding: 100px 10%; background: transparent; border-top: 1px solid var(--line-color); }
 .concierge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; }
-.concierge-item { background: #fff; padding: 50px 30px; border: 1px solid var(--line-color); }
+.concierge-item { background: transparent; padding: 50px 30px; border: 1px solid var(--line-color); }
 .concierge-item h4 { font-family: 'Marcellus', serif; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
 .concierge-item p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; }
 
 /* Trust Badges */
-.trust-badges { padding: 80px 10%; background: #fff; text-align: center; border-top: 1px solid var(--line-color); }
+.trust-badges { padding: 80px 10%; background: transparent; text-align: center; border-top: 1px solid var(--line-color); }
 .trust-logos { display: flex; justify-content: center; align-items: center; gap: 50px; margin-top: 30px; opacity: 0.4; }
 .trust-logos span { font-family: 'Marcellus', serif; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 3px; }
 
@@ -98,11 +99,11 @@ html, body {
    PROPERTY GRID (Sale, Rent, Archive)
 ======================================================== */
 .property-grid { display: grid; grid-template-columns: 1fr 1fr; background-color: var(--line-color); gap: 1px; }
-.property-item { background: var(--bg-light); overflow: hidden; position: relative; }
+.property-item { background: transparent; overflow: hidden; position: relative; }
 .prop-image-container { width: 100%; height: 500px; overflow: hidden; position: relative; }
 .prop-image { width: 100%; height: 100%; background-size: cover; background-position: center; transition: 2.5s cubic-bezier(0.15, 0, 0.15, 1); }
 .property-item:hover .prop-image { transform: scale(1.05); }
-.prop-content { padding: 60px 10%; text-align: center; }
+.prop-content { padding: 60px 10%; text-align: center; background: transparent; }
 .prop-name { font-family: 'Marcellus', serif; font-size: 1.3rem; margin: 15px 0; font-weight: 400; }
 .prop-price { font-size: 0.8rem; letter-spacing: 2px; color: var(--text-dark); margin-bottom: 25px; display: block; font-weight: 500; }
 
@@ -119,8 +120,8 @@ html, body {
 /* ========================================================
    VALUATION FORM
 ======================================================== */
-.valuation-container { max-width: 600px; margin: 180px auto 100px; padding: 0 5%; text-align: center; }
-.val-input { width: 100%; background: transparent; border: none; border-bottom: 1px solid #ddd; padding: 15px 0; margin-bottom: 30px; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--text-dark); outline: none; transition: border-color 0.8s; }
+.valuation-container { max-width: 600px; margin: 180px auto 100px; padding: 0 5%; text-align: center; background: transparent; }
+.val-input { width: 100%; background: transparent; border: none; border-bottom: 1px solid #ccc; padding: 15px 0; margin-bottom: 30px; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--text-dark); outline: none; transition: border-color 0.8s; }
 .val-input:focus { border-bottom-color: var(--gold-accent); }
 .val-input::placeholder { color: #aaa; font-weight: 300; }
 
@@ -184,7 +185,7 @@ html, body {
 .next { right: 0; border-radius: 4px 0 0 4px; }
 .prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); color: var(--gold-accent); }
 
-/* Pop-up About / Dossier */
+/* Pop-up About / Dossier / Articles */
 .about-modal {
     display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%;
     background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px);
@@ -213,17 +214,16 @@ html, body {
 @media (max-width: 950px) {
   html, body { overflow-x: hidden; position: relative; width: 100%; }
 
-  .navbar { padding: 30px 5%; flex-direction: column; gap: 15px; background: rgba(255,255,255,0.95) !important; }
-  .nav-logo, .hero-nav .nav-logo { color: var(--text-dark); }
+  .navbar { padding: 30px 5%; flex-direction: column; gap: 15px; background: rgba(255,255,255,0.95) !important; border-bottom: 1px solid var(--line-color); }
+  .nav-logo, .hero-nav .nav-logo { color: var(--text-dark); margin-bottom: 10px; }
   
-  /* AICI E MAGIA PENTRU CENTRAREA PE TELEFON */
-  .nav-links { display: flex; flex-wrap: wrap; justify-content: center; row-gap: 15px; }
-  .nav-links a, .hero-nav .nav-links a { color: var(--text-dark); margin: 0 10px; font-size: 0.55rem; }
+  /* Centrarea butoanelor din meniu cand sunt aruncate pe mai multe randuri */
+  .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; width: 100%; }
+  .nav-links a, .hero-nav .nav-links a { color: var(--text-dark); margin: 0; font-size: 0.6rem; padding: 5px; }
 
   .hero-brand { font-size: 2.5rem; letter-spacing: 6px; }
-  /* ... lasă restul regulilor media exact cum erau ... */
   
-  .philosophy-section { grid-template-columns: 1fr; }
+  .philosophy-section { grid-template-columns: 1fr; border-bottom: 1px solid var(--line-color); }
   .philosophy-image { min-height: 400px; }
   .philosophy-content { padding: 60px 5%; text-align: center; align-items: center; }
 
